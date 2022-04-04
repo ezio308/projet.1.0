@@ -33,6 +33,8 @@ namespace projet
 
         private void Ajouter_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'dbddDataSet.users'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.usersTableAdapter.Fill(this.dbddDataSet.users);
 
         }
 
@@ -47,8 +49,10 @@ namespace projet
             Deconnecter();
             cnx.Open();
           //  cmd = new SqlCommand("INSERT INTO users   VALUES ('" + login.Text + "','" + password.Text + "','" + id.Text + "','" + email.Text + "','" + prenom.Text + "','" + nom.Text + "','" + adresse.Text + "'," + grade.Text + ",'" + numtel.Text + "','" + codecn.Text + "','" + etatcivil.Text + "','" + nomconjoint.Text + "','" + prenomconjoint.Text + "'," + nbrenf.Text + "," + role.Text + ")", cnx);
-            cmd = new SqlCommand("INSERT INTO users (login,password,ID,email,name,lastname,adresse,tel,codecn,etatcivil,nomconjoint,prenomconjoint) VALUES ('" + login.Text + "','" + password.Text + "','" + id.Text + "','" + email.Text + "','" + prenom.Text + "','" + nom.Text + "','" + adresse.Text + "','"  + numtel.Text + "','" + codecn.Text + "','" + etatcivil.Text + "','" + nomconjoint.Text + "','" + prenomconjoint.Text + "')", cnx);
+            cmd = new SqlCommand("INSERT INTO users (login,password,ID,email,name,lastname,adresse,grade,tel,codecn,etatcivil,nomconjoint,prenomconjoint,nbrenfants,role,datenaiss) VALUES ('" + login.Text + "','" + password.Text + "','" + id.Text + "','" + email.Text + "','" + prenom.Text + "','" + nom.Text + "','" + adresse.Text + "','"+grade1.SelectedItem.ToString()+"','"  + numtel.Text + "','" + codecn.Text + "','" + etatcivil.Text + "','" + nomconjoint.Text + "','" + prenomconjoint.Text + "','"+nbrenf1.SelectedItem.ToString()+"','" +listBox2.SelectedItem.ToString()+"','"+dateTimePicker1.Value.ToString()+"')", cnx);
             int i = cmd.ExecuteNonQuery();
+            
+
 
             if (i != 0)
             {

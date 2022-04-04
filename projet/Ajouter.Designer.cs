@@ -29,6 +29,7 @@ namespace projet
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -50,18 +51,23 @@ namespace projet
             this.id = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
             this.prenom = new System.Windows.Forms.TextBox();
-            this.daten = new System.Windows.Forms.TextBox();
             this.adresse = new System.Windows.Forms.TextBox();
-            this.grade = new System.Windows.Forms.TextBox();
             this.numtel = new System.Windows.Forms.TextBox();
             this.codecn = new System.Windows.Forms.TextBox();
             this.etatcivil = new System.Windows.Forms.TextBox();
-            this.role = new System.Windows.Forms.TextBox();
-            this.nbrenf = new System.Windows.Forms.TextBox();
             this.prenomconjoint = new System.Windows.Forms.TextBox();
             this.nomconjoint = new System.Windows.Forms.TextBox();
             this.login = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.grade1 = new System.Windows.Forms.ListBox();
+            this.dbddDataSet = new projet.dbddDataSet();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new projet.dbddDataSetTableAdapters.usersTableAdapter();
+            this.nbrenf1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dbddDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label16
@@ -243,26 +249,12 @@ namespace projet
             this.prenom.Size = new System.Drawing.Size(100, 22);
             this.prenom.TabIndex = 43;
             // 
-            // daten
-            // 
-            this.daten.Location = new System.Drawing.Point(391, 52);
-            this.daten.Name = "daten";
-            this.daten.Size = new System.Drawing.Size(100, 22);
-            this.daten.TabIndex = 42;
-            // 
             // adresse
             // 
             this.adresse.Location = new System.Drawing.Point(391, 110);
             this.adresse.Name = "adresse";
             this.adresse.Size = new System.Drawing.Size(100, 22);
             this.adresse.TabIndex = 41;
-            // 
-            // grade
-            // 
-            this.grade.Location = new System.Drawing.Point(391, 172);
-            this.grade.Name = "grade";
-            this.grade.Size = new System.Drawing.Size(100, 22);
-            this.grade.TabIndex = 40;
             // 
             // numtel
             // 
@@ -284,20 +276,6 @@ namespace projet
             this.etatcivil.Name = "etatcivil";
             this.etatcivil.Size = new System.Drawing.Size(100, 22);
             this.etatcivil.TabIndex = 37;
-            // 
-            // role
-            // 
-            this.role.Location = new System.Drawing.Point(638, 244);
-            this.role.Name = "role";
-            this.role.Size = new System.Drawing.Size(100, 22);
-            this.role.TabIndex = 36;
-            // 
-            // nbrenf
-            // 
-            this.nbrenf.Location = new System.Drawing.Point(638, 170);
-            this.nbrenf.Name = "nbrenf";
-            this.nbrenf.Size = new System.Drawing.Size(100, 22);
-            this.nbrenf.TabIndex = 35;
             // 
             // prenomconjoint
             // 
@@ -331,11 +309,83 @@ namespace projet
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(382, 53);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(124, 22);
+            this.dateTimePicker1.TabIndex = 65;
+            // 
+            // grade1
+            // 
+            this.grade1.FormattingEnabled = true;
+            this.grade1.ItemHeight = 16;
+            this.grade1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.grade1.Location = new System.Drawing.Point(391, 175);
+            this.grade1.Name = "grade1";
+            this.grade1.Size = new System.Drawing.Size(100, 20);
+            this.grade1.TabIndex = 66;
+            // 
+            // dbddDataSet
+            // 
+            this.dbddDataSet.DataSetName = "dbddDataSet";
+            this.dbddDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.dbddDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // nbrenf1
+            // 
+            this.nbrenf1.FormattingEnabled = true;
+            this.nbrenf1.ItemHeight = 16;
+            this.nbrenf1.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.nbrenf1.Location = new System.Drawing.Point(638, 175);
+            this.nbrenf1.Name = "nbrenf1";
+            this.nbrenf1.Size = new System.Drawing.Size(100, 20);
+            this.nbrenf1.TabIndex = 67;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.listBox2.Location = new System.Drawing.Point(638, 247);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(100, 20);
+            this.listBox2.TabIndex = 68;
+            // 
             // Ajouter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.nbrenf1);
+            this.Controls.Add(this.grade1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -358,20 +408,18 @@ namespace projet
             this.Controls.Add(this.id);
             this.Controls.Add(this.email);
             this.Controls.Add(this.prenom);
-            this.Controls.Add(this.daten);
             this.Controls.Add(this.adresse);
-            this.Controls.Add(this.grade);
             this.Controls.Add(this.numtel);
             this.Controls.Add(this.codecn);
             this.Controls.Add(this.etatcivil);
-            this.Controls.Add(this.role);
-            this.Controls.Add(this.nbrenf);
             this.Controls.Add(this.prenomconjoint);
             this.Controls.Add(this.nomconjoint);
             this.Controls.Add(this.login);
             this.Name = "Ajouter";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Ajouter_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dbddDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,17 +448,20 @@ namespace projet
         private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.TextBox prenom;
-        private System.Windows.Forms.TextBox daten;
         private System.Windows.Forms.TextBox adresse;
-        private System.Windows.Forms.TextBox grade;
         private System.Windows.Forms.TextBox numtel;
         private System.Windows.Forms.TextBox codecn;
         private System.Windows.Forms.TextBox etatcivil;
-        private System.Windows.Forms.TextBox role;
-        private System.Windows.Forms.TextBox nbrenf;
         private System.Windows.Forms.TextBox prenomconjoint;
         private System.Windows.Forms.TextBox nomconjoint;
         private System.Windows.Forms.TextBox login;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ListBox grade1;
+        private dbddDataSet dbddDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private dbddDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.ListBox nbrenf1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }

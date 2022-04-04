@@ -38,37 +38,50 @@ namespace projet
         private void button2_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+
             admin admin = new admin();
             employe agent = new employe();
             agent employe = new agent();
 
 
-            Deconnecter();
-            cnx.Open();
-
-            cmd = new SqlCommand("select role from users where login='" + textBox2.Text + "'", cnx);
-
-            Reader = cmd.ExecuteReader();
-            Reader.Read();
-            string x = Convert.ToString(Reader["role"]);
-
-
-            cnx.Close();
-            if (x == "1")
+            if (textBox2.Text == "" || textBox3.Text == "")
             {
-                admin.Show();
-            }
-            else if (x == "2")
-            {
-                agent.Show();
-            }
-            else if (x == "3")
-            {
-                employe.Show();
-
+                MessageBox.Show("Veuillez remplir les 2 champs");
             }
 
+
+            else
+
+            {
+                Deconnecter();
+                cnx.Open();
+
+                cmd = new SqlCommand("select role from users where login='" + textBox2.Text + "'and password='" + textBox3.Text +"'", cnx);     
+
+                Reader = cmd.ExecuteReader();
+                Reader.Read();
+                string x = Convert.ToString(Reader["role"]);
+
+
+                cnx.Close();
+                if (x == "1")
+                {
+                    this.Hide();
+                    admin.Show();
+                }
+                else if (x == "2")
+                {
+                    this.Hide();
+                    agent.Show();
+                }
+                else if (x == "3")
+                {
+                    this.Hide();
+                    employe.Show();
+
+                }
+
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
