@@ -29,12 +29,32 @@ namespace projet
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.saisirb = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // saisirb
+            // 
+            this.saisirb.Location = new System.Drawing.Point(29, 70);
+            this.saisirb.Name = "saisirb";
+            this.saisirb.Size = new System.Drawing.Size(139, 53);
+            this.saisirb.TabIndex = 0;
+            this.saisirb.Text = "saisir un bulletin ";
+            this.saisirb.UseVisualStyleBackColor = true;
+            // 
+            // agent
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.saisirb);
+            this.Name = "agent";
             this.Text = "Form4";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button saisirb;
     }
 }

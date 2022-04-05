@@ -34,7 +34,7 @@ namespace projet
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 135);
+            this.button1.Location = new System.Drawing.Point(46, 142);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 59);
             this.button1.TabIndex = 0;

@@ -201,9 +201,9 @@ namespace projet
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(63, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 49;
-            this.label2.Text = "password";
+            this.label2.Text = "num CIN";
             // 
             // label1
             // 
